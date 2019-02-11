@@ -1,13 +1,20 @@
 require("dotenv").config();
 let axios = require("axios")
-var keys = require("./keys.js");
-var Spotify = require('node-spotify-api');
+let keys = require("./keys.js");
+let Spotify = require('node-spotify-api');
+let moment = require("moment");
 
-var spotify = new Spotify(keys.spotify);
+let spotify = new Spotify(keys.spotify);
 
 
 cmd = process.argv[2];
+let str = cmd;
+let cmd = str.toLowerCase();
 searchValue = process.argv.slice(3).join(' ');
+let str = searchValue;
+let searchValue = str.toLowerCase();
+
+
 console.log(searchValue)
 console.log('the command ' + cmd);
 
@@ -26,7 +33,6 @@ var doitCmd = 'do-what-it-says';
    // console.log(omdbApi)
 var bandsURL = `https://rest.bandsintown.com/artists/${searchValue}/events?app_id=codingbootcamp`
 var movieURL = `http://www.omdbapi.com/?t=${searchValue}&y=&plot=short&apikey=${omdbApi}`
-//var bandsURL = `https://rest.bandsintown.com/artists/"${searchValue}"/events?app_id=codingbootcamp`
 console.log(bandsURL);
 console.log(movieURL);
 getCmd(cmd)
@@ -72,7 +78,36 @@ console.log('sent bands ' + searchValue);
 function getBands(){
     console.log(bandsURL)
     axios.get(bandsURL).then(function(response){
-        console.log(response.data);
+    for(var i = 0; i < response.data.lenght; i++){
+
+      console.log(response.data[i]);
+      console.log(response.data[i].venue.name);
+      datetime = response.data[i].datetime
+      console.log(datetime);
+      let date = moment(datetime).format("MM/DD/YYYY");
+      console.log(date)
+    }
     })
 
+};
+
+function getMovies(){
+  axios.get(movieURL).then(
+    function (response) {
+        let movie = response.data;
+        // console.log(movie);
+        let movieResponse = [
+            'Title:' + movie.Title,
+            'Year: ' + movie.Year,
+            'IMDB Rating: ' + movie.imdbRating,
+            'Rotten Tomatoes: ' + movie.Ratings[1].Value,
+            'Country: ' + movie.Country,
+            'Language: ' + movie.Language,
+            'Plot: ' + movie.Plot,
+            'Actors: ' + movie.Actors,
+        ];
+        console.log(movieResponse);
+    }
+);
 }
+
