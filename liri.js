@@ -30,6 +30,10 @@ function processCmd(cmd, searchValue){
         case bandCmd:
             console.log('this is band');
             console.log(searchValue)
+            if(searchValue==""){
+              console.log('you did not enter a band');
+              break;
+            }
             getBands(searchValue);
             break;
         case spotifyCmd:
@@ -52,6 +56,9 @@ function processCmd(cmd, searchValue){
        console.log('doit')
        justDoIt();
        break;
+       default:
+       console.log('I do not understand that command');
+       break;
     }
 }
 
@@ -62,7 +69,7 @@ function getSpotifySong(song){
   .search({ type: 'track', query: `${song}`, limit:1 })
   .then(function(response) {
     console.log(response.tracks.items);
-    
+
   })
   .catch(function(err) {
     console.log(err);
