@@ -62,6 +62,7 @@ function getSpotifySong(song){
   .search({ type: 'track', query: `${song}`, limit:1 })
   .then(function(response) {
     console.log(response.tracks.items);
+    
   })
   .catch(function(err) {
     console.log(err);
@@ -74,13 +75,16 @@ function getBands(band){
     console.log(bandsURL);
     console.log('before axios call');
     axios.get(bandsURL).then(function(response){
-    for(var i = 0; i < response.data.length; i++){
-      console.log(response.data[i]);
-      console.log(response.data[i].venue.name);
-      datetime = response.data[i].datetime
-      console.log(datetime);
-      let date = moment(datetime).format("MM/DD/YYYY");
-      console.log(date)
+      let bands = response.data;
+      for (let i = 0; i < bands.length; i++) {
+        let bandEvents = bands[i];
+        let concerts = [
+            'Name of the venue: ' + bandEvents.venue.name,
+            'Venue location: ' + bandEvents.venue.city + bandEvents.venue.region,
+            'Date of the Event: ' + moment(bandEvents.venue.datetime).format("MM/DD/YYYY")
+        ]
+        console.log(concerts);
+
     }
     })
 
