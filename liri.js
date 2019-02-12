@@ -5,9 +5,7 @@ let Spotify = require('node-spotify-api');
 let moment = require("moment");
 let inquirer = require("inquirer");
 let fs = require("fs")
-
 let spotify = new Spotify(keys.spotify);
-
 
 let cmd = "";
 let searchValue = "";
@@ -68,7 +66,15 @@ function getSpotifySong(song){
     spotify
   .search({ type: 'track', query: `${song}`, limit:1 })
   .then(function(response) {
-    console.log(response.tracks.items);
+    let song = response.tracks.items[0];
+    //console.log(song)
+    let songResponse = [
+        'Artist: ' + song.album.artists[0].name,
+        'Song Name: ' + song.name,
+        'Song Preview: ' + song.preview_url,
+        'Album: ' + song.album.name
+    ]
+    console.log(songResponse)
 
   })
   .catch(function(err) {
