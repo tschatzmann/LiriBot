@@ -165,6 +165,6 @@ inquirer
       processCmd(cmd, searchValue);
     }
     else {
-      console.log("\nThat's okay , come again when you are more sure.\n");
+      console.log("\nThat's okay, let me know when you are ready to the search again.\n");
     }
   });
