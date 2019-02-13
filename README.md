@@ -46,3 +46,13 @@ LIRI will take the text inside of random.txt and then use it to call one of LIRI
 It will run the ‘spotify-this-song’ comand for "I Want it That Way," as follows the text in random.txt.
 The file random.txt may be updated to run different commands/search value combinations.
 
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Prerequisites
+You will need to have npm installed on your system. 
+Type npm -v to verify your system has npm.
+If you don’t have npm then download it from https://www.npmjs.com/get-npm. 
+You get a  spotify API key and secret from https://www.npmjs.com/package/node-spotify-api 
+
+
+
