@@ -16,12 +16,12 @@ Once you choose the command LIRI prompts you enter a search value.
 
 ## What Each Command Should Do:
 
-### node liri.js concert-this (artist/band name here)
+### node liri.js concert-this (artist/band name here):
 This will show the following information about the song in your terminal/bash window
   - Name of the venue
   - Venue location
   - Date of the Event
-### node liri.js spotify-this-song (song name here)
+### node liri.js spotify-this-song (song name here):
 This will show the following information about the song in your terminal/bash window
 Artist(s)
   - The song's name
@@ -29,7 +29,7 @@ Artist(s)
   - The album that the song is from
 If no song is provided then your program will default to "The Sign" by Ace of Base.
   
-### node liri.js movie-this (movie name here)
+### node liri.js movie-this (movie name here):
 This will output the following information to your terminal/bash window: 
 Title of the movie.
   - Year the movie came out. 
