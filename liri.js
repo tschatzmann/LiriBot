@@ -6,7 +6,7 @@ let moment = require("moment");
 let inquirer = require("inquirer");
 let fs = require("fs")
 let spotify = new Spotify(keys.spotify);
-console.log(spotify)
+//console.log(spotify)
 
 let cmd = "";
 let searchValue = "";
@@ -126,7 +126,7 @@ function justDoIt() {
    //console.log(info);
     //console.log(cmd)
     //console.log(searchValue)
-    console.log('Doing ' + cmd + 'for ' + searchValue)
+    console.log('Doing ' + cmd + ' for ' + searchValue)
     processCmd(cmd, searchValue);
   });
 }
