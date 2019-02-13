@@ -9,19 +9,19 @@ Once you type node liri.js you are able to select from on of the following comma
   - movie-this
   - Do-what-it-says
 Once you choose the command LIRI prompts you enter a search value.
-	-	Enter a band for concert-this
+  - Enter a band for concert-this
   - Enter a song
   - Enter a Movie name
   - Do not enter any search value for Do-what-it-says
 
 ## What Each Command Should Do:
 
-### node liri.js concert-this <artist/band name here>
+### node liri.js concert-this (artist/band name here)
 This will show the following information about the song in your terminal/bash window
   - Name of the venue
   - Venue location
   - Date of the Event
-### node liri.js spotify-this-song '<song name here>'
+### node liri.js spotify-this-song (song name here)
 This will show the following information about the song in your terminal/bash window
 Artist(s)
   - The song's name
@@ -29,7 +29,7 @@ Artist(s)
   - The album that the song is from
 If no song is provided then your program will default to "The Sign" by Ace of Base.
   
-### node liri.js movie-this '<movie name here>'
+### node liri.js movie-this (movie name here)
 This will output the following information to your terminal/bash window: 
 Title of the movie.
   - Year the movie came out. 
@@ -46,13 +46,14 @@ LIRI will take the text inside of random.txt and then use it to call one of LIRI
 It will run the ‘spotify-this-song’ comand for "I Want it That Way," as follows the text in random.txt.
 The file random.txt may be updated to run different commands/search value combinations.
 
-## Getting Started
+## Getting Started:
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-Prerequisites
+
+## Prerequisites:
 You will need to have npm installed on your system. 
-Type npm -v to verify your system has npm.
-If you don’t have npm then download it from https://www.npmjs.com/get-npm. 
-You get a  spotify API key and secret from https://www.npmjs.com/package/node-spotify-api 
+ - Type npm -v to verify your system has npm.
+ - If you don’t have npm then download it from https://www.npmjs.com/get-npm. 
+ - You get a  spotify API key and secret from https://www.npmjs.com/package/node-spotify-api 
 
 
 
