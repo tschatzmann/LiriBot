@@ -1,13 +1,21 @@
-# LiriBot
+
 # LIRI BOT:
 
  LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.
+
+
+ ``` node liri.js ```
 ![alt list of commands](commandlist.png)
-Once you type node liri.js you are able to select from on of the following commands:
+
+
+commands:
   - concert-this
   - spotify-this-song
   - movie-this
   - Do-what-it-says
+
+  ![alt search value](SearchValue.png)
+
 Once you choose the command LIRI prompts you enter a search value.
   - Enter a band for concert-this
   - Enter a song
@@ -16,11 +24,15 @@ Once you choose the command LIRI prompts you enter a search value.
 
 ## What Each Command Should Do:
 
+
+![alt band results](bandresults.png)
 ### node liri.js concert-this (artist/band name here):
 This will show the following information about the song in your terminal/bash window
   - Name of the venue
   - Venue location
   - Date of the Event
+
+  ![alt spotify results](spotifyresults.png)
 ### node liri.js spotify-this-song (song name here):
 This will show the following information about the song in your terminal/bash window
 Artist(s)
@@ -28,6 +40,8 @@ Artist(s)
   - A preview link of the song from Spotify
   - The album that the song is from
 If no song is provided then your program will default to "The Sign" by Ace of Base.
+
+![alt movie results](movieresults.png)
   
 ### node liri.js movie-this (movie name here):
 This will output the following information to your terminal/bash window: 
@@ -40,6 +54,8 @@ Title of the movie.
   - Plot of the movie.
   - Actors in the movie.
 If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
+
+![alt do it results](doitresults.png)
 
 ### node liri.js do-what-it-says
 LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
