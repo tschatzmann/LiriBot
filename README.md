@@ -13,9 +13,7 @@ commands:
   - spotify-this-song
   - movie-this
   - Do-what-it-says
-
-  ![alt search value](SearchValue.png)
-
+  
 Once you choose the command LIRI prompts you enter a search value.
   - Enter a band for concert-this
   - Enter a song
