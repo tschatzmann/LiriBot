@@ -8,6 +8,7 @@ Once you type node liri.js you are able to select from on of the following comma
   - spotify-this-song
   - movie-this
   - Do-what-it-says
+  
 Once you choose the command LIRI prompts you enter a search value.
   - Enter a band for concert-this
   - Enter a song
